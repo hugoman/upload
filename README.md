@@ -25,7 +25,7 @@ $uploadHandler = new UploadHandler('/path/to/local_folder');
 
 // validation rules
 $uploadHandler->addRule('extension', ['allowed' => ['jpg', 'jpeg', 'png']], '{label} should be a valid image (jpg, jpeg, png)', 'Profile picture');
-$uploadHandler->addRule('size', ['max' => '20M'], '{label} should have less than {max}', 'Profile picture');
+$uploadHandler->addRule('size', ['size' => '20M'], '{label} should have less than {size}', 'Profile picture');
 
 $result = $uploadHandler->process($_FILES['picture']); // ex: subdirectory/my_headshot.png
 
